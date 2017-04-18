@@ -102,6 +102,12 @@ public class FileUploadController {
 		return "jsp/Default84ba";	
     }
     
+    @RequestMapping(value = { "/upload" }, method = RequestMethod.GET)
+    public String upload(Model model){
+    	
+		return "jsp/uploadnews";	
+    }
+    
     @RequestMapping(value = { "/home_page" }, method = RequestMethod.GET)
     public String homepage(Model model){
     	
@@ -146,7 +152,21 @@ public class FileUploadController {
 		model.addAttribute("webInfo", webInfo);
 		return "jsp/regist";
 	}
-
+	
+	@RequestMapping(value = { "/edit" }, method = RequestMethod.GET)
+	public String newfile(ModelMap model) {
+		ckeditor webInfo = new ckeditor();
+		model.addAttribute("webInfo", webInfo);
+		return "jsp/regist";
+	}
+	
+	@RequestMapping(value = { "/edit" }, method = RequestMethod.POST)
+	public String upload(@Valid ckeditor webInfo, BindingResult result,
+			ModelMap model) 
+	{
+		webInfoService.saveWebpage(webInfo);
+		return "redirect:/";
+	}
 	
 	@RequestMapping(value = { "/new-webpage" }, method = RequestMethod.POST)
 	public String saveUser(@Valid ckeditor webInfo, BindingResult result,

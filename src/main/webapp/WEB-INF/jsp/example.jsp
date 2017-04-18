@@ -40,6 +40,9 @@
 					</c:forEach>
 					<td><a href="<c:url value='/new-webpage' />"
 							class="btn btn-primary custom-width">New Page</a></td>
+							
+					<td><a href="<c:url value='/upload' />"
+							class="btn btn-primary custom-width">Upload File</a></td>
 		    		</tbody>
 				</table>
 				
