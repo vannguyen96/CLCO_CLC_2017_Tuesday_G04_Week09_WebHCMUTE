@@ -22,19 +22,21 @@
 		</ul>
 	</div>
 	<div>
-		<form method="GET"  action="/search">
+	<form method="GET"  action="/search">
 			<table>
-				<tr><td>Search file for name:</td><td><input type="text" name="fileName" /></td></tr>
+				<tr><td>Search file:</td><td><input type="text" name="name" /></td></tr>
 				<tr><td></td><td><input type="submit" value="Search" /></td></tr>
 			</table>
 		</form>
 	</div>
 	<div>
 		<ul>
-			<li th:each="file : ${result}">
-				<a th:href="${file}" th:text="${file}" />
+			<li th:each="file : ${filesdetail}">
+				<a th:href="${file.link}" th:text="${file.link}" />
+				<a th:text="${file.name}" />
 			</li>
 		</ul>
 	</div>
+
 </body>
 </html>

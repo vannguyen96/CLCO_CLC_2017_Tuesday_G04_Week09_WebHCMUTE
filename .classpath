@@ -27,5 +27,14 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/VanNguyen/.m2/repository/net/htmlparser/jericho/jericho-html/3.3/jericho-html-3.3.jar">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+			<attribute name="maven.groupId" value="net.htmlparser.jericho"/>
+			<attribute name="maven.artifactId" value="jericho-html"/>
+			<attribute name="maven.version" value="3.3"/>
+			<attribute name="maven.scope" value="compile"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
